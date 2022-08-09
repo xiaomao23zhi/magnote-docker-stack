@@ -11,6 +11,6 @@ RUN git clone https://github.com/apache/spark.git --branch v3.3.0 --single-branc
         -Pkubernetes
 
 FROM openjdk:11-jdk-slim
-LABEL maintainer="Xiaomao23Zhi <xiaomao23zhi@gmail.com>
+LABEL maintainer="Xiaomao23Zhi <xiaomao23zhi@gmail.com>"
 
 COPY --from=builder spark-3.3.0-bin-hadoop-3.3.4-cloud-scala-2.12.tgz .
