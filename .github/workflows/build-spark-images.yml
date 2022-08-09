@@ -3,14 +3,15 @@ name: build-spark-images
 # Controls when the workflow will run
 on:
   push:
-    branches: [ "main" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+env:
+  # Use docker.io for Docker Hub if empty
+  REGISTRY: ghcr.io
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
