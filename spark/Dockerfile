@@ -1,6 +1,6 @@
 FROM ghcr.io/xiaomao23zhi/magnote-docker-stack/builder:main as builder
 
-RUN EMAVEN_OPTS="-Xss64m -Xmx2g -XX:ReservedCodeCacheSize=1g" && \
+RUN MAVEN_OPTS="-Xss64m -Xmx2g -XX:ReservedCodeCacheSize=1g" && \
     git clone https://github.com/apache/spark.git --branch v3.3.0 --single-branch && \
     cd /spark && \
     dev/make-distribution.sh \
