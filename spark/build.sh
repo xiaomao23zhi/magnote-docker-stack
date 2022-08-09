@@ -13,7 +13,7 @@ TAG=${SPARK_VERSION}_${HADOOP_VERSION}
 wget -q https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
 tar -xvf spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
 
-# Install addtional jars
+# Install additional jars
 cd spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}
 wget -q -P ./jars https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/${AWS_JAVA_SDK_BUNDLE_VERSION}/aws-java-sdk-bundle-${AWS_JAVA_SDK_BUNDLE_VERSION}.jar
 wget -q -P ./jars https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/${HADOOP_AWS_VERSION}/hadoop-aws-${HADOOP_AWS_VERSION}.jar
