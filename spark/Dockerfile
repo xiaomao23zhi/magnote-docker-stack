@@ -1,1 +1,11 @@
+FROM ghcr.io/xiaomao23zhi/magnote-docker-stack/builder:main as builder
 
+RUN git clone https://github.com/apache/spark.git --branch v3.3.0 --single-branch && \
+    cd /spark && \
+    dev/make-distribution.sh \
+        --name hadoop-3.3.4-cloud-scala-2.12 --pip --r --tgz \
+        -DskipTests -Dhadoop.version=3.3.4 \
+        -Phive -Phive-thriftserver \
+        -Phadoop-3.3.4 \
+        -Phadoop-cloud \
+        -Pkubernetes
