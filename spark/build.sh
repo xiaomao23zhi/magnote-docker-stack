@@ -21,5 +21,5 @@ wget -q -P ./jars https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/${
 # Build images
 ./bin/docker-image-tool.sh -r ${REPO} -t ${TAG} -p ./kubernetes/dockerfiles/spark/bindings/python/Dockerfile build
 
-docker push ${REPO}/spark:${TAG}
-docker push ${REPO}/spark-py:${TAG}
+docker push ${REPO}/spark:v${TAG}
+docker push ${REPO}/spark-py:v${TAG}
