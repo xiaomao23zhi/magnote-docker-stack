@@ -10,7 +10,7 @@ HADOOP_AWS_VERSION=3.2.4
 REPO=gchr.io/xiaomao23zhi/magnote-docker-stack
 TAG=${SPARK_VERSION}_${HADOOP_VERSION}
 
-wget SPARK_BIN_URL=https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
+wget https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
 tar -xzf ${SPARK_BIN}
 
 # Install addtional jars
