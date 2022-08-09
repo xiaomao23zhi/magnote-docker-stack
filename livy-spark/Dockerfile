@@ -44,5 +44,6 @@ USER ${spark_uid}
 #  7078 - Driver RPC port
 #  7079 - Blockmanager port
 #  8088 - JMX Exporter for Prometheus
+# 10000 - Livy RPC Server for Jupyter integration
 # 10015 - Spark Thrift server port
-EXPOSE 4040 7078 7079 8088 10015
+EXPOSE 4040 7078 7079 8088 10000 10015
