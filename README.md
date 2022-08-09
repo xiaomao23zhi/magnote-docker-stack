@@ -1,0 +1,1 @@
+# magnote-docker-stack
