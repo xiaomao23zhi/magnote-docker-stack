@@ -4,14 +4,16 @@ set -ex
 
 SPARK_VERSION=3.3.0
 HADOOP_VERSION=hadoop3
-SPARK_BIN=spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
+
 AWS_JAVA_SDK_BUNDLE_VERSION=1.11.1034
 HADOOP_AWS_VERSION=3.2.4
+
 REPO=gchr.io/xiaomao23zhi/magnote-docker-stack
 TAG=${SPARK_VERSION}_${HADOOP_VERSION}
 
+
 wget https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
-tar -xzf ${SPARK_BIN}
+tar spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
 
 # Install addtional jars
 cd spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}
