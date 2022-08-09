@@ -1,5 +1,5 @@
 ARG LIVY_BUILDER=ghcr.io/xiaomao23zhi/magnote-docker-stack/builder:main
-ARG SPARK_BASE=ghcr.io/xiaomao23zhi/magnote-docker-stack/spark:3.3.0_hadoop3
+ARG SPARK_BASE=ghcr.io/xiaomao23zhi/magnote-docker-stack/spark:v3.3.0_hadoop3
 
 ### Livy Builder Container
 FROM $LIVY_BUILDER as build
