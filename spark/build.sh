@@ -8,7 +8,7 @@ AWS_JAVA_SDK_BUNDLE_VERSION=1.11.1034
 HADOOP_AWS_VERSION=3.2.4
 
 REPO=ghcr.io/xiaomao23zhi/magnote-docker-stack
-TAG=${SPARK_VERSION}_${HADOOP_VERSION}
+TAG=v${SPARK_VERSION}_${HADOOP_VERSION}
 
 wget -q https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
 tar -xvf spark-${SPARK_VERSION}-bin-${HADOOP_VERSION}.tgz
@@ -21,5 +21,5 @@ wget -q -P ./jars https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/${
 # Build images
 ./bin/docker-image-tool.sh -r ${REPO} -t ${TAG} -p ./kubernetes/dockerfiles/spark/bindings/python/Dockerfile build
 
-docker push ${REPO}/spark:v${TAG}
-docker push ${REPO}/spark-py:v${TAG}
+docker push ${REPO}/spark:${TAG}
+docker push ${REPO}/spark-py:${TAG}
